@@ -2,7 +2,7 @@ import { auth, clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 
 // protectedRoutes with routematcher
 // if anyone goes to dashboard and forward, they need to login first or signup (if not)
-const protectedRoutes = createRouteMatcher(["/dashboard(.*"]) 
+const protectedRoutes = createRouteMatcher(["/dashboard(.*)"]) 
 
 export default clerkMiddleware(async(auth, req)=> {
     if (protectedRoutes(req)) {
