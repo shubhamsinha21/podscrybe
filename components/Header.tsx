@@ -3,7 +3,7 @@ import { SignInButton, UserButton, useAuth, Protect } from "@clerk/nextjs"
 import { Home, Sparkles, Zap, Crown } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-// import { DashboardNav } from "@/components/dashboard-nav"
+import { DashboardNav } from "@/components/dashboard-nav"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
@@ -52,7 +52,7 @@ export function Header() {
                      {/* Dashboard Navigation inline with logo */}
                      {showDashboardNav && (
                         <div className="flex items-center pl-2 sm:pl-4 border-l border-white/20">
-                            {/* <DashboardNav/> */}
+                            <DashboardNav/>
                         </div>
                      )}
                 </div>
