@@ -1,7 +1,15 @@
+import { Header } from '@/components/Header'
 import React from 'react'
 
 export default function page() {
   return (
-    <div>Hello Bro. I'm Shubham Sinha. Lets have a talk.</div>
+    <div>
+      <Header/>
+      {/* <HeroSection/>
+      <FeaturesSection/>
+      <PricingSection/>
+      <CtaSection/>
+      <Footer/> */}
+    </div>
   )
 }
