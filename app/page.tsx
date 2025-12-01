@@ -1,4 +1,5 @@
 import { Header} from '@/components/Header'
+import FeaturesSection from '@/components/home/features-section'
 import HeroSection from '@/components/home/hero-section'
 
 export default function page() {
@@ -6,8 +7,8 @@ export default function page() {
     <div>
       <Header/>
       <HeroSection/>
-      {/* <FeaturesSection/>
-      <PricingSection/>
+      <FeaturesSection/>
+      {/* <PricingSection/>
       <CtaSection/>
       <Footer/> */}
     </div>
