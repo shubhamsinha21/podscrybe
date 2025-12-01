@@ -1,12 +1,12 @@
-import { Header } from '@/components/Header'
-import React from 'react'
+import { Header} from '@/components/Header'
+import HeroSection from '@/components/home/hero-section'
 
 export default function page() {
   return (
     <div>
       <Header/>
-      {/* <HeroSection/>
-      <FeaturesSection/>
+      <HeroSection/>
+      {/* <FeaturesSection/>
       <PricingSection/>
       <CtaSection/>
       <Footer/> */}
