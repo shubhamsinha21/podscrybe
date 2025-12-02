@@ -7,7 +7,7 @@ interface PricingSectionProps {
 
 export default function PricingSection({ compact= false}: PricingSectionProps) {
   return (
-    <section className="container mx-auto px-4 relative z-10">
+    <section className="relative py-24 md:py-32 overflow-hidden">
         {/* gradient background */}
         <div className="absolute inset-0 mesh-background-subtle"></div>
         
