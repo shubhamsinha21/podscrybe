@@ -1,4 +1,4 @@
-**
+/*
  * Audio Utilities
  *
  * Helpers for extracting and estimating audio file durations.
@@ -41,7 +41,7 @@ export async function getAudioDuration(file: File): Promise<number> {
 
         // Success: metadata loaded, duration available
         audio.addEventListener("loadedmetadata", () => {
-            URL.revokeObjectURL(ObjectUrl); // clean up memory
+            URL.revokeObjectURL(objectUrl); // clean up memory
             resolve(Math.floor(audio.duration)); // return duration in wholr seconds
         })
 
@@ -53,7 +53,8 @@ export async function getAudioDuration(file: File): Promise<number> {
 
         // start loading audio file
         audio.src = objectUrl;
-    })
+    });
+}
 
 /**
  * Estimate duration from file size (fallback)
@@ -76,6 +77,5 @@ export async function getAudioDuration(file: File): Promise<number> {
 
 export function estimateDurationFromSize(fileSize: number): number {
     // convert bytes to MB, multiply by 8 (minutes per MB), convert to seconds
-    return Math.floor((fileSize / (1024 * 1024)) * 8 * 60)
-}
+    return Math.floor((fileSize / (1024 * 1024)) * 8 * 60);
 }
